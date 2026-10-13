@@ -180,7 +180,7 @@
     "report": "TESTING.md",
     "summary": "Render gates pass on a native image: exact dry at MIX 0, the DSP against its float reference across every control (-56 to -80 dB residual), trig splits, STGS changes, freeze (including a slow crossfade on a ringing loop), idle tails and the LIM level, eight-instance isolation under guard and dirty start, garbage start and no zipper. Static 401 cycles/sample, 433.3 instructions/sample measured against stock under the same cases. Played by the author on an Octatrack MKII through BBD01-BBD13, including T1 behind FILTER and PHASER after the rep-divide fix (REP_DIVIDES.md); formal hardware qualification not done.",
     "hardwareStatus": "reported",
-    "evidenceRevision": "291cb3bb38e49d52b6dcba52538a0e76db9f4894",
+    "evidenceRevision": "536fb51ba71a0bfbcbbac8ba6ce99de75684c087",
     "gates": [
       "verify.py: init rules, static cycles, native placement, exact dry, reference match, splits, stages, freeze, idle and LIM level, eight-instance isolation (-guard -dirty), garbage start, zipper census",
       "evidence/performance.json: perf:audit (static, stock benchmark under matched cases, 32 s stress)",
@@ -306,7 +306,7 @@
         "model": "MKII",
         "testedOn": "2026-10-12",
         "tester": "JamCones",
-        "sourceRevision": "291cb3bb38e49d52b6dcba52538a0e76db9f4894",
+        "sourceRevision": "536fb51ba71a0bfbcbbac8ba6ce99de75684c087",
         "imageSha256": "ffe65ea1f10926c0ffde18d9afe38b346826136d31673d5cc2823781ebca90f1",
         "summary": "The author played images BBD01 to BBD14 on an MKII. On the release image BBD14: BBD behaves as on BBD13 with no T1 crackle, DARK REV works on FX2, the FX2 chooser is as built, two BBD instances ran at once, a Part or project save and reload worked, eight instances (FX2 on all eight tracks) ran for 30 minutes with feedback and modulation running, a saved project came back after a power cycle with its settings, an LFO swept FREQ end to end, and FRZ and every other control were played through the crossfader.",
         "limitations": [

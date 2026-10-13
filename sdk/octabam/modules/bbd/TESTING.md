@@ -8,7 +8,7 @@ repository.
 
 ## Commands and exact revision
 
-Gate source: commit `291cb3bb`. Every
+Gate source: commit `536fb51b`. Every
 run below used that `bbd.asm`, `manifest.py` and `bbd_ref.py`. The run tree is
 a disposable copy of this repository's `sdk/octabam` with the module at
 `modules/bbd` and `vendor/` plus `out/raw/section_3_MAIN_OS.bin` linked from a

@@ -8,7 +8,7 @@ Release image: BBD14, MAIN OS SHA-256
 `ffe65ea1f10926c0ffde18d9afe38b346826136d31673d5cc2823781ebca90f1`, the site's
 own build of BBD beside the stock effects, equal to the native record in
 `sdk/native-comparisons/bbd.json`. The released folder rebuilds it byte for
-byte. Source: `291cb3bb`. BBD14's DSP code is BBD13's; only its placement moved (below).
+byte. Source: `536fb51b`. BBD14's DSP code is BBD13's; only its placement moved (below).
 
 ## What was played
 

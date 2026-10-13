@@ -1,6 +1,6 @@
 # BBD Delay 0.1.0-experimental release resource bounds
 
-Native source: `291cb3bb` (the released folder).
+Native source: `536fb51b` (the released folder).
 MAIN OS SHA-256: `ffe65ea1f10926c0ffde18d9afe38b346826136d31673d5cc2823781ebca90f1`
 (BBD14), the site's build of BBD beside the stock effects and the image the
 author played; it equals the native record in `sdk/native-comparisons/bbd.json`.
