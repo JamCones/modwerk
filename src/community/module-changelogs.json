@@ -989,6 +989,18 @@
           "Author's functional MKII report (7–9 Oct 2026) covers routing, levels, everyday flows, saving and power; no timed stress run or chip timing."
         ]
       }
+    ],
+    "bbd": [
+      {
+        "version": "0.1.0-experimental",
+        "date": "2026-10-12",
+        "changes": [
+          "First BBD Delay release: an FX2 bucket-brigade delay with a 2:1 compander, clock-tracking 8th-order anti-alias and 9th-order reconstruction filters, a clocked bucket line (1,023 or 4,095 buckets, 50 to 800 ms) with a charge-transfer curve and bucket noise.",
+          "Main page: TIME (the clock, gliding so locks and LFOs bend the pitch), FDBK, FRZ (longer trails up to an exact endless loop that keeps its level through a crossfade), TONE and FREQ (treble tilt or a resonant 400 Hz-2 kHz bandpass in the feedback loop) and MIX (0 is exact dry). SETUP: STGS, LIM (keeps self-oscillation at a set level) and PRE/POST 150 Hz high-pass switches, set per Part.",
+          "Takes Spring Rev's and Plate Rev's code space on FX2 when built beside the stock effects (Dark Rev stays intact); mono wet, free-running time (no tempo sync), FX2 only.",
+          "Author reports the release image working on an MKII, including Dark Rev, eight instances for 30 minutes with feedback and modulation running, a Part/project save and reload and a project restored after a power cycle, after fixing T1 crackle and tracks 1-4 dropping out on STGS changes in early images. Not yet combinable with Tape Echo in one build; silicon timing is not measured."
+        ]
+      }
     ]
   }
 }

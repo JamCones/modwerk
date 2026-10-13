@@ -1,0 +1,100 @@
+{
+  "firmware": "1.40C",
+  "imageSha256": "ffe65ea1f10926c0ffde18d9afe38b346826136d31673d5cc2823781ebca90f1",
+  "emulatorSha256": "1a2c7e57fd7e6eb7e60e593a7fb55a64146b1111a61b2163fc09faf3640b46d0",
+  "setup": "Headless ot_emu; MKII panel; stopped transport; 128\u00d764 LCD at integer scale 6.",
+  "palette": {
+    "on": [
+      240,
+      240,
+      240
+    ],
+    "off": [
+      24,
+      24,
+      24
+    ]
+  },
+  "keyMs": 150,
+  "plan": [
+    {
+      "wait": 3000
+    },
+    {
+      "press": [
+        "YES"
+      ]
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "press": [
+        "NO"
+      ]
+    },
+    {
+      "press": [
+        "FUNC",
+        "FX2"
+      ]
+    },
+    {
+      "encoder": {
+        "name": "LEVEL",
+        "delta": 30
+      }
+    },
+    {
+      "press": [
+        "YES"
+      ]
+    },
+    {
+      "wait": 300
+    },
+    {
+      "capture": "ot-setup.png"
+    },
+    {
+      "press": [
+        "FX2"
+      ]
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "capture": "ot-main.png"
+    },
+    {
+      "encoder": {
+        "name": "B",
+        "delta": 70
+      }
+    },
+    {
+      "encoder": {
+        "name": "D",
+        "delta": -24
+      }
+    },
+    {
+      "wait": 300
+    },
+    {
+      "encoder": {
+        "name": "E",
+        "delta": -20
+      }
+    },
+    {
+      "capture": "ot-feedback.png"
+    }
+  ],
+  "screenshots": {
+    "ot-setup.png": "2d8c0d67ee20963872d48df87fa4cba8d47990218450bc27ce9e56eb32454e5f",
+    "ot-main.png": "8f3e578a0672b4085021ce7a2bf16aef59e22b47fc7083517188c33dc32bfcf6",
+    "ot-feedback.png": "f55f73030e3d404f05fa2130307902cedb6337c8c262b42653f195f3219e1b0a"
+  }
+}

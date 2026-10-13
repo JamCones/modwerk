@@ -1388,3 +1388,58 @@ E-Verb is in none of them.
 
 No hardware result exists for 0.1.1; the owner's MKII report covers 0.1.0.
 Publication needs the owner's approval of this exact source.
+
+## BBD Delay 0.1.0-experimental — 12 October 2026
+
+BBD Delay enters the FX2 catalogue as a new module by JamCones under MIT: a
+bucket-brigade delay in 1,044 DSP56300 words with a compander, clock-tracking
+anti-alias and reconstruction filters, a clocked bucket line, a resonant
+feedback tilt, an exact-loop freeze and a feedback governor.
+
+`module:verify` compared the browser builder with native octabam on the
+author's own 1.40C file: of the 130 selections in BBD's coverage set, 54
+module-owned images match (22 identical outright, 32 outside the platform
+writes) and 76 refusals agree, with no mismatches
+(`sdk/native-comparisons/bbd.json`). It recorded 413,696 clean native
+declaration checks containing BBD; none was refused by the ledger. The 200,704
+that also contain Tape Echo were then left out, keeping
+`src/catalog/native-metadata.json` under GitHub's 100 MB file limit (95.7 MB
+with the remaining 212,992), and BBD declares Tape Echo as a conflict, so
+the site refuses that pair for now. BBD needed
+an entry in `src/engine/assets/static-dsp.json` (FX id 14, priority 16), like
+E-Verb, before the browser placed its code; without it every comparison
+differed.
+
+Beside the stock effects the site gives up SPRING REV and PLATE REV, not SPRING
+REV alone: BBD would fit there, but DARK REV calls a 35-word routine at SPRING
+REV+820 and BBD's code would cover it. BBD is placed from PLATE REV's base and
+ends before that routine. A new render gate runs DARK REV through `dsp_host`
+on both cores with fixed and moving controls and finds it bit-identical to the
+stock OS; on the earlier Spring-only layout the same gate fails (about 95 % of
+words differ). The author's private images BBD01–BBD13 used that layout, so
+DARK REV was broken in them; none was published. The browser's default solo
+image equals the author-tested BBD14 MAIN
+`ffe65ea1f10926c0ffde18d9afe38b346826136d31673d5cc2823781ebca90f1` byte for
+byte, and the released folder rebuilds it natively.
+
+All 47 native-image render gates pass: exact dry at MIX 0, the DSP against its
+float reference across every control (−56 to −80 dB residual), trig splits,
+STGS changes, freeze (including a slow crossfade into FRZ 127 on a ringing
+loop, which an earlier source failed at −5 dB), idle tails and the LIM level,
+eight-instance isolation under guard and dirty start, garbage start, zipper and
+DARK REV. A matched benchmark measures at most 433.31 executed instructions
+per sample with a trig split (SPRING REV 314.19, CHORUS 293.06, DJ EQ 330.94
+under the same cases), and a 32-second, eight-instance stress run finds no
+clobber or hang. The static block bound is 11,216 modeled cycles per instance,
+44,864 for four per core against the 49,920 module allowance.
+
+The author reports BBD14 on an MKII: BBD as on the previous image with no T1
+crackle, DARK REV working on FX2, the expected FX2 list, two simultaneous
+instances, a Part or project save and reload, eight instances (FX2 on all
+eight tracks) for 30 minutes with feedback and modulation running, a project
+restored after a power cycle with its settings, an LFO sweeping FREQ end to end
+and every control played through the crossfader. LFO sweeps of the other
+controls, MIDI/USB load and silicon timing are not reported. The author
+also played the site's build of BBD with E-Verb (`faf93562…`, equal to its
+native record) and reports both working; that combination check is not part
+of BBD's qualification.
