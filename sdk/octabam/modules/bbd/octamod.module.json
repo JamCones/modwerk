@@ -168,7 +168,7 @@
     "report": "TESTING.md",
     "summary": "Render gates pass on a native image: exact dry at MIX 0, the DSP against its float reference across every control including HPF (-57 to -78 dB residual), trig splits, STGS changes, the stop-kill input, freeze (including a slow crossfade on a ringing loop), idle tails and the LIM level, eight-instance isolation under guard and dirty start, garbage start and no zipper. Static 378 cycles/sample, 439.44 instructions/sample measured against stock under the same cases. The browser builder matches native octabam in all 130 compared selections. The author played the release image on an MKII: DARK REV working, two instances on T1 and T5, Part/project reload and a power cycle, every parameter, LFOs and trigless locks.",
     "hardwareStatus": "reported",
-    "evidenceRevision": "e7682d7ccc1f9dd951ac6e1ff78efbde5ba3c8c2",
+    "evidenceRevision": "00541e03f394846de9db316bb591c3ab25f4f6f9",
     "gates": [
       "verify.py: init rules, static cycles, native placement, exact dry, reference match (HPF at 1, 64, 127), splits, stages, the stop-kill input, freeze, idle and LIM level, eight-instance isolation (-guard -dirty), garbage start, zipper census",
       "evidence/performance.json: perf.py bench (stock benchmark under matched cases) and a 32 s eight-instance stress render",
@@ -294,7 +294,7 @@
         "model": "MKII",
         "testedOn": "2026-10-14",
         "tester": "JamCones",
-        "sourceRevision": "e7682d7ccc1f9dd951ac6e1ff78efbde5ba3c8c2",
+        "sourceRevision": "00541e03f394846de9db316bb591c3ab25f4f6f9",
         "imageSha256": "bc53d1b3e96a4c22d5efb426c880d08e26d4f0288dccbe8ffaf43e25a18fb3ba",
         "summary": "The author played the release image (BBDMW2) on an MKII for about ten minutes: DARK REV still works on FX2; two BBD instances at once on T1 and T5 (one per DSP core); HPF and STGS working; a Part reload and a project save and reload restore the saved settings after unsaved edits; the saved project comes back after a power cycle; every main-page and SETUP parameter played, with LFOs on every parameter that takes one and trigless locks.",
         "limitations": [
